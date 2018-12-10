@@ -1,0 +1,16 @@
+server:
+  port: 8085
+spring:
+  profiles:
+    #以application-*的形式
+    active: dev
+mybatis:
+  #配置xml 路径
+  mapper-locations: classpath:mapper/*.xml
+  #配置dao接口路径
+  type-aliases-package: com.boge.springmybatis.dao
+#控制台打印sql语句
+logging:
+    level:
+      #这是自己dao 包的路径
+      com.boge.springmybatis.dao: debug
